@@ -5,6 +5,11 @@ This is an interactive credit card form, made with web based technologies and ja
 ## Screenshots
 
 
+### UI
+
+![Home](https://github.com/joshaodev/interactive-card-details-form-main/blob/main/screenshots/Screenshot%20from%202022-09-02%2023-52-02.png)
+
+
 ## 📌 Version
 
 1.0 
