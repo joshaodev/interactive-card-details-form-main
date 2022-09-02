@@ -6,12 +6,41 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="icon" type="image/png" sizes="32x32" href="./img/favicon.png" />
     <title>Frontend Mentor | Interactive card details form</title>
+    <!-- Fonts-->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Source+Code+Pro:wght@200;300;400;700&display=swap"
+      rel="stylesheet"
+    />
     <link rel="stylesheet" href="./css/main.css" />
     <script src="./js/script.js" defer></script>
   </head>
   <body>
     <main id="main-container">
-      <div id="aside"></div>
+      <div id="aside">
+        <div id="card">
+          <div id="card-front">
+            <div id="logo">
+              <img src="./img/card-logo.svg" alt="Card Logo" />
+            </div>
+            <div id="card-info">
+              <span id="card-number">xxxx xxxx xxxx xxxx</span>
+              <div>
+                <span id="cardholder">Josemar OA</span>
+                <span>
+                  <span id="card-exp-month">mm</span>/<span id="card-exp-year"
+                    >yy</span
+                  >
+                </span>
+              </div>
+            </div>
+          </div>
+          <div id="card-back">
+            <span id="card-cvc">000</span>
+          </div>
+        </div>
+      </div>
       <div id="main">
         <form method="post" id="credit-card-form">
           <div class="form-control">

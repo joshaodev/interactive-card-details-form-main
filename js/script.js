@@ -2,8 +2,13 @@ const form = document.querySelector("#credit-card-form");
 const fields = document.querySelectorAll(".required");
 const fieldsMessages = document.querySelectorAll(".spans");
 
-const cardNumberRegex = /^\d{4} \d{4} \d{4} \d{4}$/;
+const cardholder = document.querySelector("#cardholder");
+const cardNumber = document.querySelector("#card-number");
+const cardExpMonth = document.querySelector("#card-exp-month");
+const cardExpYear = document.querySelector("#card-exp-year");
+const cardCvc = document.querySelector("#card-cvc");
 
+const cardNumberRegex = /^\d{4} \d{4} \d{4} \d{4}$/; // XXXX XXXX XXXX XXXX
 const monthRegex = /^(0[1-9]|1[0-2])$/; // MM (01-12)
 const yearRegex = /^([0-9]{2})$/; //YY (00-99)
 const cvcRegex = /^[0-9]{3,4}$/; //CVC (000 - 9999)
@@ -22,6 +27,7 @@ function setSuccess(index) {
 
 // NAME VALIDATE
 function nameValidate() {
+  cardholder.textContent = fields[0].value; // change Name in real time
   if (fields[0].value === "") {
     setError(0, "Can't be blank");
     return false;
@@ -33,6 +39,7 @@ function nameValidate() {
 
 //NUMBER CARD VALIDATE
 function cNumberValidate() {
+  cardNumber.textContent = fields[1].value;
   if (fields[1].value === "") {
     setError(1, "Can't be blank");
     return false;
@@ -48,6 +55,7 @@ function cNumberValidate() {
 
 // MONTH VALIDATE
 function monthValidate() {
+  cardExpMonth.textContent = fields[2].value;
   if (fields[2].value === "") {
     setError(2, "Can't be blank");
     return false;
@@ -63,6 +71,7 @@ function monthValidate() {
 
 // YEAR VALIDATE
 function yearValidate() {
+  cardExpYear.textContent = fields[3].value;
   if (fields[3].value === "") {
     setError(3, "Can't be blank");
     return false;
@@ -78,6 +87,7 @@ function yearValidate() {
 
 // CVC
 function cvcValidate() {
+  cardCvc.textContent = fields[4].value;
   if (fields[4].value === "") {
     setError(4, "Can't be blank");
     return false;
