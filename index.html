@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" type="image/png" sizes="32x32" href="./img/favicon.png" />
+    <title>Frontend Mentor | Interactive card details form</title>
+    <link rel="stylesheet" href="./css/main.css" />
+    <script src="./js/script.js" defer></script>
+  </head>
+  <body>
+    <main id="main-container">
+      <div id="aside"></div>
+      <div id="main">
+        <form method="post" id="credit-card-form">
+          <div class="form-control">
+            <label for="name">Cardholder Name</label>
+            <input
+              type="text"
+              id="name"
+              placeholder="e.g. Josemar Oatanha"
+              class="required"
+              oninput="nameValidate()"
+            />
+            <!-- Error message -->
+            <span class="spans"></span>
+          </div>
+
+          <div class="form-control">
+            <label for="number">Card Number</label>
+            <input
+              type="text"
+              id="number"
+              placeholder="e.g. 1234 5678 9123 0000"
+              class="required"
+              oninput="cNumberValidate()"
+            />
+            <!-- Error message -->
+            <span class="spans"></span>
+          </div>
+
+          <div class="row-flex">
+            <div class="form-control">
+              <label for="month">Exp. Date (MM/YY)</label>
+              <div class="row-flex">
+                <input
+                  type="text"
+                  id="month"
+                  placeholder="MM"
+                  class="required"
+                  oninput="monthValidate()"
+                />
+                <input
+                  type="text"
+                  id="year"
+                  placeholder="YY"
+                  class="required"
+                  oninput="yearValidate()"
+                />
+              </div>
+              <!-- Error message -->
+              <span class="spans"></span>
+              <span class="spans"></span>
+            </div>
+
+            <div class="form-control">
+              <label for="cvc">Cvc</label>
+              <input
+                type="text"
+                id="cvc"
+                placeholder="e.g. 123"
+                class="required"
+                oninput="cvcValidate()"
+              />
+              <!-- Error message -->
+              <span class="spans"></span>
+            </div>
+          </div>
+
+          <button type="submit" id="btnConfirm">Confirm</button>
+        </form>
+      </div>
+    </main>
+  </body>
+</html>
