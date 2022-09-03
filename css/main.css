@@ -100,7 +100,8 @@ input {
   align-items: center;
 }
 
-#credit-card-form {
+#credit-card-form,
+#submited-success-container {
   width: 300px;
 }
 
@@ -138,7 +139,8 @@ input {
   width: 100%;
 }
 
-#btnConfirm {
+#btnConfirm,
+#btnContinue {
   border: none;
   width: 100%;
   height: 35px;
@@ -154,9 +156,38 @@ input {
   opacity: 1;
 }
 
-/* VALIDATIONS CLASSES */
+#submited-success-container {
+  text-align: center;
+}
+
+#submited-success-container img {
+  width: 70px;
+}
+
+#submited-success-container span {
+  display: block;
+  text-transform: uppercase;
+  color: #240a30;
+  font-size: 2em;
+  margin: 20px 0;
+}
+
+#submited-success-container p {
+  font-weight: bold;
+  color: #ccc;
+  font-size: 0.9em;
+}
+
+#submited-success-container button {
+  margin-top: 40px;
+}
+/* AUX CLASSES */
 .spans {
   color: #bf0000;
   font-size: 0.8em;
   margin-top: 0.5em;
+}
+
+.hide {
+  display: none;
 }

@@ -1,4 +1,5 @@
 const form = document.querySelector("#credit-card-form");
+const successContainer = document.querySelector("#submited-success-container");
 const fields = document.querySelectorAll(".required");
 const fieldsMessages = document.querySelectorAll(".spans");
 
@@ -101,14 +102,37 @@ function cvcValidate() {
   }
 }
 
+// CEAR FIELDS
+function clearFields() {
+  fields.forEach((field) => {
+    field.value = "";
+    field.style.border = "1px solid #ddd";
+  });
+}
+
 // SUBMIT FORM
 function confirmSubmit(event) {
   event.preventDefault();
 
-  if (nameValidate() && cNumberValidate() && yearValidate() && cvcValidate()) {
+  if (
+    nameValidate() &&
+    cNumberValidate() &&
+    monthValidate() &&
+    yearValidate() &&
+    cvcValidate()
+  ) {
+    form.classList.add("hide");
+    successContainer.classList.remove("hide");
     console.log("FORMULARIO VALIDO");
+    clearFields();
   }
+}
+
+function backToForm() {
+  successContainer.classList.add("hide");
+  form.classList.remove("hide");
 }
 
 /** Events */
 document.querySelector("#btnConfirm").addEventListener("click", confirmSubmit);
+document.querySelector("#btnContinue").addEventListener("click", backToForm);
